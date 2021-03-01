@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Zakat Pendapatan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Punca Pendapatan</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Hasil Penggajian</ion-label>
+      <ion-input [(ngModel)]="hasilPenggajian"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hasil Bebas</ion-label>
+      <ion-input [(ngModel)]="hasilBebas"></ion-input>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Tolakan (-)</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Kifayah Isi Rumah</ion-label>
+      <ion-input [(ngModel)]="tolakanIsiRumah"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tolakan Lain</ion-label>
+      <ion-input [(ngModel)]="tolakanLain"></ion-input>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Pengiraan</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Jumlah Zakat</ion-label>
+      <div slot="end">{{ jumlahZakat }}</div>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="block" (click)="kiraZakat()">Kira Zakat</ion-button>
+  <ion-button expand="block" color="success">Bayar Zakat</ion-button>
+
+</ion-content>
