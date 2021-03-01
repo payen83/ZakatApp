@@ -1,0 +1,7 @@
+{
+  "name": "ZakatSelangor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
