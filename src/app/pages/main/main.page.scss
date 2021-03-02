@@ -1,0 +1,38 @@
+.card-menu {
+    height: 15vh;
+    border: 3px solid orange;
+    border-radius: 12px;
+    background-color: yellow;
+}
+
+.item-center{
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.menu-icon {
+    font-size: 15vw;
+}
+
+.menu-title {
+    text-align: center;
+    margin-top: -0.6em;
+}
+
+h4 {
+    font-size: 95%;
+}
+
+ion-title {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.divider {
+    width: 100%;
+    margin-bottom: 1em;
+    border-bottom: 1px solid grey;
+}

@@ -1,4 +1,8 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core';
+import '@capacitor-community/http';
+
+import { Plugins } from '@capacitor/core';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
+  id: string = 'abdrauf123';
+  password: string = '1234';
+  constructor(public httpClient: HttpClient) { }
 
   btnClick() {
     alert("Hello World");
@@ -16,9 +21,10 @@ export class HomePage {
     console.log('The a value is :', a);
   }
 
-  calculateZakat(value: any){
+  calculateZakat(value: any) {
     let result: number = 0;
     return result;
   }
+
 
 }

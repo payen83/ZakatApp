@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'kalkulator',
     loadChildren: () => import('./pages/kalkulator/kalkulator.module').then( m => m.KalkulatorPageModule)
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+  },
 ];
 
 @NgModule({

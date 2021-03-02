@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Zakat Pendapatan</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="resetData()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -43,7 +48,8 @@
     </ion-item>
 
   </ion-list>
-  <ion-button expand="block" (click)="kiraZakat()">Kira Zakat</ion-button>
-  <ion-button expand="block" color="success">Bayar Zakat</ion-button>
 
+  <ion-button expand="block" (click)="kiraZakat()">Kira Zakat</ion-button>
+  <ion-button *ngIf="jumlahZakat" expand="block" color="success">Bayar Zakat</ion-button>
+  
 </ion-content>

@@ -1,0 +1,76 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button fill="clear">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <img width="100%" src="assets/img/lzs-logo.png"/>
+  <ion-searchbar color="medium" debounce="500" animated></ion-searchbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-menu">
+          <div class="item-center">
+            <ion-icon color="light" class="menu-icon" name="cash"></ion-icon>
+          </div>
+        </ion-card>
+        <div class="menu-title"><h4>Pembayaran</h4></div>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-menu">
+          <div class="item-center">
+            <ion-icon color="light" class="menu-icon" name="checkmark-circle"></ion-icon>
+          </div>
+        </ion-card>
+        <div class="menu-title"><h4>Semakan</h4></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="card-menu">
+          <div class="item-center">
+            <ion-icon color="light" class="menu-icon" name="calculator"></ion-icon>
+          </div>
+        </ion-card>
+        <div class="menu-title"><h4>Pengiraan</h4></div>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-menu">
+          <div class="item-center">
+            <ion-icon color="light" class="menu-icon" name="help"></ion-icon>
+          </div>
+        </ion-card>
+        <div class="menu-title"><h4>Informasi</h4></div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <div class="divider"></div>
+
+  <ion-title>Terkini</ion-title>
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let news of newsList">
+      <ion-card class="card-news">
+        <ion-card-header>
+          <ion-card-subtitle> {{ news.title }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img [src]="news.image">
+          {{ news.body }}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
