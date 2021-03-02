@@ -6,7 +6,7 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button fill="clear">
+    <ion-fab-button fill="clear" (click)="goToLogin()">
       <ion-icon name="person"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -36,7 +36,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-card class="card-menu">
+        <ion-card class="card-menu" button="true" routerLink="/kalkulator">
           <div class="item-center">
             <ion-icon color="light" class="menu-icon" name="calculator"></ion-icon>
           </div>

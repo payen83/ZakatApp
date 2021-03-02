@@ -1,0 +1,58 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+  <img width="100%" src="assets/img/lzs-logo.png" />
+  <div class="separation"></div>
+
+  <div *ngIf="!profile">
+    <ion-item>
+      <ion-icon slot="start" name="person"></ion-icon>
+      <ion-input [(ngModel)]="user.id" placeholder="ID"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="key"></ion-icon>
+      <ion-input [(ngModel)]="user.password" placeholder="Password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="doLogin()" class="login-button" expand="block">Login</ion-button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" fill="clear">Register</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" fill="clear">Lupa Password</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="profile">
+    <ion-item>
+      <ion-icon slot="start" name="person"></ion-icon>
+      <ion-label>{{ profile.nama }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="mail"></ion-icon>
+      <ion-label>{{ profile.email }}</ion-label>
+    </ion-item>
+    <ion-button (click)="doLogout()" class="login-button" expand="block">Logout</ion-button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="/main" color="dark" class="login-button" expand="block" fill="clear">Kembali</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

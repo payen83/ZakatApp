@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +15,7 @@ export class MainPage implements OnInit {
   };
   public newsList: Array<any>;
 
-  constructor() { 
+  constructor(public router: Router) { 
     this.newsList = [
       { title: "Card News", image: "assets/shapes.svg", body: "Cards are a standard piece of UI that serves as an entry point to more detailed information. A card can be a single component, but is often made up of some header, title, subtitle, and content." },
 
@@ -23,6 +24,10 @@ export class MainPage implements OnInit {
       { title: "Select News", image: "assets/shapes.svg", body: "Selects are form controls to select an option, or options, from a set of options, similar to a native <select> element. When a user taps the select" }
     ];
 
+  }
+
+  goToLogin(){
+    this.router.navigateByUrl('/login');
   }
 
   ngOnInit() {
