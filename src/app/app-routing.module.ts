@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'cawangan-detail/:index',
     loadChildren: () => import('./pages/cawangan-detail/cawangan-detail.module').then( m => m.CawanganDetailPageModule)
   },
+  {
+    path: 'penyata',
+    loadChildren: () => import('./pages/penyata/penyata.module').then( m => m.PenyataPageModule)
+  },
 ];
 
 @NgModule({
