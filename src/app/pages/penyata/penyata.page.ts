@@ -39,7 +39,7 @@ export class PenyataPage implements OnInit {
        // console.log(response);
        this.penyataList = response.paymentHistory;
       } catch(error) {
-  
+        alert(error);
       }
     } else {
       alert('Pengguna tidak jumpai. Sila login terlebih dahulu')

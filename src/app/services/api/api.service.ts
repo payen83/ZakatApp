@@ -18,6 +18,7 @@ export class ApiService {
   //8. Received response from the method invoked.
 
   getPenyataTahunan(year: any, user: any){
+    
     let url: string = this.baseURL + 'DisplayRecord/?';
     let body: string = 'requestType=kutipan' + '&mykad=' + user.no_kpb + '&recordGUID=' + user.cid + "&validation=yes" + "&year=" + year;
 
