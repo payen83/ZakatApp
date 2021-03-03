@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LZS</string>
+    <string name="title_activity_main">LZS</string>
+    <string name="package_name">my.gov.zakatselangor.zakatapp</string>
+    <string name="custom_url_scheme">my.gov.zakatselangor.zakatapp</string>
+</resources>
