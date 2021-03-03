@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'cawangan',
+    loadChildren: () => import('./pages/cawangan/cawangan.module').then( m => m.CawanganPageModule)
+  },
+  {
+    path: 'cawangan-detail/:index',
+    loadChildren: () => import('./pages/cawangan-detail/cawangan-detail.module').then( m => m.CawanganDetailPageModule)
+  },
 ];
 
 @NgModule({

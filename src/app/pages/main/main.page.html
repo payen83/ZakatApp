@@ -12,7 +12,7 @@
   </ion-fab>
 
   <img width="100%" src="assets/img/lzs-logo.png"/>
-  <ion-searchbar color="medium" debounce="500" animated></ion-searchbar>
+  <ion-searchbar (ionChange)="getSearchKeyword($event)" color="medium" debounce="1500" animated></ion-searchbar>
 
   <ion-grid>
     <ion-row>

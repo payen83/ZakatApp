@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cawangan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionChange)="getItems($event)" placeholder="Carian Cawangan" color="medium" debounce="500" animated></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let cawangan of cawanganList; let i = index;" button="true" routerLink="/cawangan-detail/{{ i }}">
+      <ion-label class="ion-text-wrap">
+        <h2 class="ion-text-uppercase">{{ cawangan.cawangan }}, {{ cawangan.daerah }}</h2>
+        <p>{{ cawangan.alamat1 }}, {{ cawangan.alamat2 }}</p>
+        <p>{{ cawangan.bandar }} {{ cawangan.poskod }}, {{ cawangan.negeri }}</p>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img [src]="cawangan.image" />
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

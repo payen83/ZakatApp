@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cawangan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ cawangan.cawangan }}, {{ cawangan.daerah }}</ion-card-title>
+      <ion-card-subtitle>{{ cawangan.negeri }}</ion-card-subtitle>
+    </ion-card-header>
+      
+    <ion-card-content>
+      <p>Alamat: {{ cawangan.alamat1 }}, {{ cawangan.alamat2 }}</p>
+      <p>No Telefon: {{ cawangan.notel }}</p>
+      <p>Peta Lokasi:</p>
+      <br/>
+      <img [src]="cawangan.image">
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
